@@ -1,0 +1,141 @@
+*,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        font-size: 100%;
+      }
+
+      html,
+      body {
+        height: 100%;
+        overflow: hidden;
+      }
+
+      html {
+        font-size: 16px;
+        background-color: gainsboro;
+      }
+
+      @media screen and (min-width: 640px) {
+        html {
+          font-size: 2.5vw;
+        }
+      }
+
+      body {
+        position: relative;
+        font-family: BlinkMacSystemFont, -apple-system, sans-serif;
+        font-size: 1rem;
+        font-weight: bold;
+        line-height: 1.5;
+        word-break: keep-all;
+        color: black;
+        cursor: default;
+      }
+
+      a {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        padding: 1rem;
+        text-decoration: none;
+        color: inherit;
+        background-color: gainsboro;
+        outline: 0;
+        cursor: pointer;
+      }
+
+      a::-webkit-scrollbar {
+        display: none;
+      }
+
+      a::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+      a:not(:first-child) {
+        display: none;
+      }
+
+      a:target {
+        display: block;
+      }
+
+      a mark {
+        color: blue;
+        background-color: transparent;
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s;
+      }
+
+      a > figure {
+        float: right;
+        width: calc(50% - .5rem);
+        margin-top: .25rem;
+        margin-bottom: 1rem;
+        margin-left: 1rem;
+        -webkit-animation: fadeIn 2s;
+        animation: fadeIn 2s;
+      }
+
+      @media screen and (min-width: 900px) {
+        a > figure {
+          width: calc(100% / 3 - .5rem);
+        }
+      }
+
+      figure figure:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+
+      a figure img {
+        display: block;
+        width: 100%;
+      }
+
+      a figure img:not(:last-of-type) {
+        margin-bottom: .5rem;
+      }
+
+      a figcaption {
+        margin-top: .375rem;
+        font-size: .75rem;
+      }
+
+      @-webkit-keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      .center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 4vw;
+      }
